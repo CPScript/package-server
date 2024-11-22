@@ -5,14 +5,14 @@ import threading
 import time
 import shutil
 
-PORT = 8000  # You can change the port if needed
+PORT = 8080  # You can change the port if needed
 DIRECTORY = "package"  # Add file here when the server starts
 
 if not os.path.exists(DIRECTORY):
     os.makedirs(DIRECTORY)
     print(f"Created directory: {DIRECTORY}")
 else:
-    print(f"Directory already exists: {DIRECTORY}")
+    print(f"Directory already exists, please add your package if not added already: {DIRECTORY}")
 
 class CustomHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
